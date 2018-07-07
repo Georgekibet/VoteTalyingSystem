@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:bottom="2dp">
+    <!-- Background layer -->
+    <shape android:shape="oval">
+      <solid android:color="@color/color_accent" />
+      <corners android:angle="3" />
+      <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp" />
+      
+    </shape>
+  </item>
+</layer-list>

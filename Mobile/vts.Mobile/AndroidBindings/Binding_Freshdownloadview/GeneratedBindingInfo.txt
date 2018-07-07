@@ -1,0 +1,6 @@
+Binding for:
+com.pitt.fresh.library:freshdownloadview:1.0
+
+Dependencies:
+
+freshdownloadview-1.0.aar,    Path=C:\Users\gkrug\.gradle\caches\modules-2\files-2.1\com.pitt.fresh.library\freshdownloadview\1.0\ce4480204e9594497e573ddb258941a672ed36ec\freshdownloadview-1.0.aar

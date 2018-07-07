@@ -1,0 +1,35 @@
+﻿namespace vts.Core.Commands
+{
+    public enum CommandType : int
+    {
+        None = 0,
+        CreatePresidentialResult = 11,
+        AddPresidentialLineItems = 12,
+        ConfirmPresidentialResults = 13,
+        ModifyPresidentialResults = 14,
+        CreateGubernatorialResult = 21,
+        AddGubernatorialLineItems = 22,
+        ConfirmGubernatorialResults = 23,
+        ModifyGubernatorialResults = 24,
+        CreateSenatorialResult = 31,
+        AddSenatorialLineItems = 32,
+        ConfirmSenatorialResults = 33,
+        ModifySenatorialResults = 34,
+        CreateMpResult = 41,
+        AddMpLineItems = 42,
+        ConfirmMpResults = 43,
+        ModifyMpResults = 44,
+        CreateWomenRepResult = 51,
+        AddWomenRepLineItems = 52,
+        ConfirmWomenRepResults = 53,
+        ModifyWomenRepResults = 54,
+        CreateMcaResult = 61,
+        AddMcaLineItems = 62,
+        ConfirmMcaResults = 63,
+        ModifyMcaResults = 64,
+        CreateReferendumResult = 71,
+        AddReferendumLineItems = 72,
+        ConfirmReferendumResults = 73,
+        ModifyReferendumResults = 74,
+    }
+}

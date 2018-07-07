@@ -1,0 +1,93 @@
+﻿@model vts.Web.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Suspend User";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Users", "Account")">User Management</a></li>
+    <li class="breadcrumb-item active">Suspend User</li>
+</ol>
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-user"></span>
+            <span class="d-ib">Suspend User</span>
+            <hr />
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.PhoneNumber)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.MainRole)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MainRole)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Status)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>
+                @using (Html.BeginForm())
+            {
+                    @Html.AntiForgeryToken()
+
+                    <div class="col-md-9 col-md-offset-1">
+                        @Html.HiddenFor(model => model.Id)
+                        <input type="submit" value="Suspend" class="btn btn-default" />
+                        @Html.ActionLink("Back to Users", "Users")
+                    </div>
+                }
+            </p>
+            
+        </div>
+    </div>
+</div>
+
+

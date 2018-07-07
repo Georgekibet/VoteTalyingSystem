@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>604915e5-944d-41d9-8913-bb01c5f6e5f8</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>vts.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Candidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Constituency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\ConstituencyMps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\County.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\CountyGovernors.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\CountySenators.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\CountyWomenReps.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Election.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\MasterDataCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\MasterEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\PoliticalParty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\PollingCentre.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Race.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Region.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\SettingsKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\Ward.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MasterData\WardMcas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\ICandidateRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IConstituencyRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\ICountyRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IElectionRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IMasterRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IPoliticalPartyRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IPollingCentreRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IRaceRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IRegionRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\ISettingsRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IUserRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Repository\Master\IWardRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\QueryMasterData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ResultReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\UnifiedDefaultServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Validation\DomainValidationException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Validation\IValidation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Validation\ValidationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Validation\ValidationResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\IPaginatedList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\PaginatedList.cs" />
+  </ItemGroup>
+</Project>

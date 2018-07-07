@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <drawable name="color_alternate_action">@color/color_alternate_action</drawable>
+  <drawable name="color_accent_dark">@color/color_accent_dark</drawable>
+
+  <!--black original was
+    <item name="color_primary" type="color">#FF2A2D34</item>
+  -->
+  <item name="color_primary" type="color">#FF2196F3</item>
+  <item name="color_primary_dark" type="color">#FF1976D2</item>
+  <item name="color_primary_black" type="color">#FF2A2D34</item>
+
+  <item name="color_background" type="color">#FFFDFDF4</item>
+  <item name="color_background_dark" type="color">@color/color_primary_dark</item>
+
+  <item name="color_accent" type="color">#FF03A9F4</item>
+  <item name="color_accent_dark" type="color">#FF03A9F4</item>
+
+  <item name="color_sent" type="color">@color/color_accent</item>
+  <item name="color_offline" type="color">@color/color_secondary_text</item>
+  <item name="color_error" type="color">#FFE66A5D</item>
+
+  <item name="color_alternate_background" type="color">#FFE6E6E6</item>
+
+  <item name="color_list_divider" type="color">#66979797</item>
+
+  <item name="color_alternate_action" type="color">#FFFF4081</item>
+
+  <item name="sync_paused_color" type="color">#FFFFA500</item>
+
+  <item name="transparent" type="color">#00000000</item>
+
+  <item name="color_primary_text" type="color">#FF1A1A1A</item>
+  <item name="color_secondary_text" type="color">#FF303030</item>
+  <item name="color_action_bar_content" type="color">#FFFFFFFF</item>
+  <item name="color_action_bar_content_30_opacity" type="color">#4DFFFFFF</item>
+
+  <item name="color_action" type="color">@color/color_accent</item>
+  <item name="color_action_pressed" type="color">@color/color_accent</item>
+  <item name="color_action_shadow" type="color">@color/color_accent_dark</item>
+
+  <item name="color_side_panel" type="color">@color/color_primary</item>
+  <item name="color_side_panel_darker" type="color">@color/color_primary</item>
+
+  <item name="color_receive_payment_confirmed" type="color">#FF00CC00</item>
+  <item name="color_white" type="color">#FFFF</item>
+
+</resources>

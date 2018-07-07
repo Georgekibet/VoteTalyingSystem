@@ -1,0 +1,62 @@
+﻿
+
+@{
+    ViewBag.Title = "Import Regions";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Region")">Regions</a></li>
+    <li class="breadcrumb-item active">Import Regions</li>
+</ol>
+@{
+    if (@ViewBag.AlertMessage != "")
+    {
+        <div id="alert" class="alert @ViewBag.AlertType" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>@ViewBag.AlertMessage</span>
+        </div>
+    }
+}
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Import Regions</span>
+            <hr />
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 form-wrapper">
+            @using (Html.BeginForm("Import", "Region", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+
+                    
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="file-upload-btn btn btn-primary">
+                                <span>File</span>
+                                <input name="file" type="file" accept=".csv">
+                            </div>
+                        </div>
+                           
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-upload"></i> Import</button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+
+
+

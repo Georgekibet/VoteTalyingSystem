@@ -1,0 +1,84 @@
+﻿@model Vts.WebLib.ViewModels.CountyViewModels.CountyViewModel
+
+@{
+    ViewBag.Title = "County Details";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "County")">Counties</a></li>
+    <li class="breadcrumb-item active">County Details</li>
+</ol>
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">County Details</span>
+            <hr />
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.Code)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.Code)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.Region.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.Region.Name)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.DateCreated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.DateCreated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.DateLastUpdated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.DateLastUpdated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.County.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.County.Status)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.County.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+</div>
+
+

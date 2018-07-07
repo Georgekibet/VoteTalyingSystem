@@ -1,0 +1,119 @@
+﻿@model Vts.WebLib.ViewModels.ConstituencyViewModel
+
+@{
+    ViewBag.Title = "Constituency Details";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Constituency")">Constituencies</a></li>
+    <li class="breadcrumb-item active">County Details</li>
+</ol>
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Constituency Details</span>
+            <hr />
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.Code)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.Code)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.County.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.County.Name)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.NumberOfPollingStations)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.NumberOfPollingStations)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.NumberOfWards)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.NumberOfWards)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.TotalRegisteredVoters)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.TotalRegisteredVoters)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.PopulationOver18)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.PopulationOver18)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.Area)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.Area)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.DateCreated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.DateCreated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.DateLastUpdated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.DateLastUpdated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Constituency.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Constituency.Status)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Constituency.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,99 @@
+﻿@using System.Web.UI.WebControls
+@using PagedList.Mvc
+@model PagedList.IPagedList<vts.Shared.Entities.Master.PoliticalParty>
+
+
+@{
+    ViewBag.Title = "Counties";
+}
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Counties</span>
+
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <p>
+                    @Html.ActionLink("Add PoliticalParty", "Add") | @Html.ActionLink("Import PoliticalParty", "Import")
+                </p>
+            </div>
+            <div class="col-md-4">
+                @using (Html.BeginForm("Index", "County", FormMethod.Get))
+                {
+                    <div class="form-group form-group-sm">
+                        <div class="input-with-icon">
+                            @Html.Editor("searchString", new { value = ViewBag.CurrentFilter as string, htmlAttributes = new { @class = "form-control", placeHolder = "Search Phrase" } })
+                           <span class="icon icon-search input-icon"></span>
+                        </div>
+                    </div>
+
+                }
+            </div>
+
+        </div>
+        <div class="col-md-12">
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+                    </th>
+                    <th>
+                        @Html.ActionLink("Code", "Index", new { sortOrder = ViewBag.CodeeSortParm, currentFilter = ViewBag.CurrentFilter })
+                    </th>
+                    <th>
+                        @Html.ActionLink("Status", "Index", new { sortOrder = ViewBag.StatusSortParm, currentFilter = ViewBag.CurrentFilter })
+                    </th>
+                    <th>
+                        @Html.ActionLink("Date Created", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+                    </th>
+                    @{if (User.IsInRole("Admin"))
+                        {
+                            <th>Actions</th>
+                        }
+                    }
+
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Code)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateCreated)
+                        </td>
+                        @{if (User.IsInRole("Admin"))
+                            {
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                </td>
+                            }
+                        }
+
+                    </tr>
+                            }
+
+            </table>
+
+        </div>
+        <div class="col-md-12">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+
+    </div>
+</div>

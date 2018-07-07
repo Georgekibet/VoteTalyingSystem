@@ -1,0 +1,76 @@
+﻿@model Vts.WebLib.ViewModels.RegionViewModel
+
+@{
+    ViewBag.Title = "Edit Region";
+}
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Region")">Regions</a></li>
+    <li class="breadcrumb-item active">Edit Region</li>
+</ol>
+@{
+    if (@ViewBag.AlertMessage != "")
+    {
+        <div id="alert" class="alert @ViewBag.AlertType" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>@ViewBag.AlertMessage</span>
+        </div>
+    }
+}
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Edit Region</span>
+            <hr/>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-8 form-wrapper">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Region.Id)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Region.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Region.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Region.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Region.Code, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Region.Code, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Region.Code, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-9">
+                            <input type="submit" value="Save" class="btn btn-default"/> &nbsp;
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s3">
+                            @Html.HiddenFor(n => n.Region.DateCreated)
+                            @Html.HiddenFor(n => n.Region.Status)
+                            @Html.HiddenFor(model => model.Region.Id)
+
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+</div>
+
+

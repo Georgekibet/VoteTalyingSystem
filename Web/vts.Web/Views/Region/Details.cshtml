@@ -1,0 +1,78 @@
+﻿@model Vts.WebLib.ViewModels.RegionViewModel
+
+@{
+    ViewBag.Title = "Region Details";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Region")">Regions</a></li>
+    <li class="breadcrumb-item active">Region Details</li>
+</ol>
+
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Region Details</span>
+            <hr/>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Region.Name)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Region.Name)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Region.Code)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Region.Code)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Region.DateCreated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Region.DateCreated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Region.DateLastUpdated)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Region.DateLastUpdated)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Region.Status)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Region.Status)
+                    </dd>
+
+                </dl>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Region.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+    </div>
+
+       

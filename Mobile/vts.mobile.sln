@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vts.Mobile", "vts.Mobile\vts.Mobile.csproj", "{42D01FEC-DE74-472C-B905-21C9CB366DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile.Common", "Mobile.Common\Mobile.Common.csproj", "{41112F0B-89FE-4726-9C6C-09ECEA4F9B61}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "vts.Core.Shared", "..\Libraries\vts.Core.Shared\vts.Core.Shared.shproj", "{604915E5-944D-41D9-8913-BB01C5F6E5F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile.core", "Mobile.core\Mobile.core.csproj", "{13655D9A-2973-46C4-A3B6-4D931AAF6315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding_Freshdownloadview", "vts.Mobile\AndroidBindings\Binding_Freshdownloadview\Binding_Freshdownloadview.csproj", "{DB9DF60C-A883-4677-8B5D-B091FD1A327F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Libraries\vts.Core.Shared\vts.Shared.projitems*{13655d9a-2973-46c4-a3b6-4d931aaf6315}*SharedItemsImports = 4
+		..\Libraries\vts.Core.Shared\vts.Shared.projitems*{604915e5-944d-41d9-8913-bb01c5f6e5f8}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D01FEC-DE74-472C-B905-21C9CB366DD1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{41112F0B-89FE-4726-9C6C-09ECEA4F9B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41112F0B-89FE-4726-9C6C-09ECEA4F9B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41112F0B-89FE-4726-9C6C-09ECEA4F9B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41112F0B-89FE-4726-9C6C-09ECEA4F9B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13655D9A-2973-46C4-A3B6-4D931AAF6315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13655D9A-2973-46C4-A3B6-4D931AAF6315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13655D9A-2973-46C4-A3B6-4D931AAF6315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13655D9A-2973-46C4-A3B6-4D931AAF6315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9DF60C-A883-4677-8B5D-B091FD1A327F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9DF60C-A883-4677-8B5D-B091FD1A327F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9DF60C-A883-4677-8B5D-B091FD1A327F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9DF60C-A883-4677-8B5D-B091FD1A327F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

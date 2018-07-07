@@ -1,0 +1,16 @@
+Mobile/Mobile.Common/obj/
+Mobile/vts.Mobile/obj/
+Web/vts.Web/obj/
+Web/vts.Web/bin/
+WebApi.Template1/obj/
+Tests/Vts.Core.Tests/obj/
+Tests/vts.Web.Tests/bin/
+Tests/Vts.Core.Tests/bin/Debug/Ploeh.AutoFixture.AutoMoq.xml
+Tests/Vts.Core.Tests/bin/
+Tests/vts.Web.Tests/obj/
+Web/Vts.WebLib/bin/
+Web/Vts.WebLib/obj/
+Mobile/vts.Mobile/AndroidBindings/Binding_Freshdownloadview/obj/
+Mobile/Mobile.Common/bin/
+Mobile/Mobile.core/obj/
+Mobile/vts.Mobile/bin/

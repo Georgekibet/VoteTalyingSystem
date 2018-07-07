@@ -1,0 +1,145 @@
+﻿@using System.Web.UI.WebControls
+@using PagedList.Mvc
+@using vts.Core.Shared.Entities.Master
+@using vts.Web.Models
+@model PagedList.IPagedList<Vts.WebLib.ViewModels.RegionViewModel>
+
+
+@{
+    ViewBag.Title = "Regions";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Region")">Regions</a></li>
+
+</ol>
+@{
+    if (@ViewBag.AlertMessage != "")
+    {
+        <div id="alert" class="alert @ViewBag.AlertType" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>@ViewBag.AlertMessage</span>
+        </div>
+    }
+}
+<div class="layout-content-body">
+    <div class="title-bar">
+        <h1 class="title-bar-title">
+            <span class="d-ib icon icon-map"></span>
+            <span class="d-ib">Regions</span>
+
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <p>
+                    @Html.ActionLink("Add Region", "Add") | @Html.ActionLink("Import Region(s)", "Import")
+                </p>
+            </div>
+            @using (Html.BeginForm("Index", "Region", FormMethod.Get))
+            {
+                <div class="col-md-2">
+                    <label class="custom-control custom-control-primary custom-checkbox">
+                        @Html.CheckBox("showInactive", (bool)ViewBag.ShowInactive, new { @class = "custom-control-input" })
+
+                        <span class="custom-control-indicator"></span>
+                        <span class="custom-control-label">Show Inactive</span>
+                    </label>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group form-group-sm">
+                        @Html.DropDownList("itemsperpage", ViewModelBase.ItemsPerPageList, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                    <div class="form-group form-group-sm">
+                        <div class="input-group">
+                            <div class="input-with-icon">
+                                @Html.Editor("searchString", new { value = ViewBag.SearchString as string, htmlAttributes = new { @class = "form-control", placeHolder = "Search Phrase" } })
+                                <span class="icon icon-search input-icon"></span>
+                            </div>
+                            <div class="input-group-btn">
+                                <button class="btn btn-sm btn-primary" title="Search" data-container="body" data-placement="top" data-toggle="tooltip" type="submit">
+                                    <span class="icon icon-search-plus icon-fw"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            }
+
+        </div>
+        <div class="col-md-12">
+            
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Status</th>
+                    <th>Date Created</th>
+                    @{if (User.IsInRole("Admin"))
+                        {
+                            <th>Actions</th>
+                        }
+                    }
+                    
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region.Code)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region.DateCreated)
+                        </td>
+                        @{if (User.IsInRole("Admin"))
+                            {
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", new { id = item.Region.Id }) |
+                                    @Html.ActionLink("Details", "Details", new {id = item.Region.Id}) |
+                                    @{
+                                        if (item.Region.Status == EntityStatus.Active)
+                                        {
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Region.Id })
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Activate", "Activate", new { id = item.Region.Id })
+                                        }
+                                    }
+                                </td>
+                            }
+                        }
+                        
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-6 pull-md-left pagination">
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            </div>
+
+            <div class="col-md-6 text-right">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { showInactive = ViewBag.ShowInactive, currentFilter = ViewBag.SearchString, itemsperpage = 1, page }))
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

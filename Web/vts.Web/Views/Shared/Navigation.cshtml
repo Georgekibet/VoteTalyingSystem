@@ -1,0 +1,124 @@
+﻿<div class="layout-sidebar">
+    <div class="layout-sidebar-backdrop"></div>
+    <div class="layout-sidebar-body">
+        <nav id="sidenav" class="sidenav-collapse collapse">
+            <ul class="sidenav">
+                <li class="sidenav-search hidden-md hidden-lg">
+                    <form class="sidenav-form" action="http://demo.naksoid.com/">
+                        <div class="form-group form-group-sm">
+                            <div class="input-with-icon">
+                                <input class="form-control" type="text" placeholder="Search…">
+                                <span class="icon icon-search input-icon"></span>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+                <!--<li class="sidenav-heading">Navigation</li>-->
+                <li class="sidenav-item">
+                    <a href="@Url.Action("Index","Home")">
+                        <span class="badge badge-success"></span>
+                        <span class="sidenav-icon icon icon-windows"></span>
+                        <span class="sidenav-label">Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-flag-checkered"></span>
+                        <span class="sidenav-label">Reports</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="Javascript:;" target="_blank">Report 1</a></li>
+                        <li><a href="Javascript:;" target="_blank">Report 2</a></li>
+                        <li><a href="Javascript:;" target="_blank">Report 3</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-heading">Provisioning</li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-fire"></span>
+                        <span class="sidenav-label">Political Parties</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="@Url.Action("Index", "PoliticalParty")">View Political Parties</a></li>
+                        <li><a href="@Url.Action("Add", "PoliticalParty")">Add Political Parties</a></li>
+                        <li><a href="@Url.Action("Import", "PoliticalParty")">Import Political Parties</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-users"></span>
+                        <span class="sidenav-label">Candidates</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="Javascript:;" target="_blank">View Candidates</a></li>
+                        <li><a href="Javascript:;" target="_blank">Add Candidate</a></li>
+                        <li><a href="Javascript:;" target="_blank">Import Candidates</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-flag-checkered"></span>
+                        <span class="sidenav-label">Races</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="Javascript:;" target="_blank">View Races</a></li>
+                        <li><a href="Javascript:;" target="_blank">Add Race</a></li>
+                        <li><a href="Javascript:;" target="_blank">Import Races</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-map"></span>
+                        <span class="sidenav-label">Regions</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="@Url.Action("Index", "Region")">View Regions</a></li>
+                        <li><a href="@Url.Action("Add", "Region")">Add Region</a></li>
+                        <li><a href="@Url.Action("Import", "Region")">Import Regions</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-map"></span>
+                        <span class="sidenav-label">Counties</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="@Url.Action("Index", "County")">View Counties</a></li>
+                        <li><a href="@Url.Action("Add", "County")">Add County</a></li>
+                        <li><a href="@Url.Action("Import", "County")">Import Counties</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-map"></span>
+                        <span class="sidenav-label">Constituencies</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="@Url.Action("Index", "Constituency")">View Constituencies</a></li>
+                        <li><a href="@Url.Action("Add", "Constituency")">Add Constituency</a></li>
+                        <li><a href="@Url.Action("Import", "Constituency")">Import Constituencies</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-heading">Settings</li>
+                <li class="sidenav-item has-subnav">
+                    <a href="#" aria-haspopup="true">
+                        <span class="sidenav-icon icon icon-users"></span>
+                        <span class="sidenav-label">Users Management</span>
+                    </a>
+                    <ul class="sidenav-subnav collapse">
+                        <li class="sidenav-subheading"></li>
+                        <li><a href="@Url.Action("Users", "Account")" target="_blank">View Users</a></li>
+                        <li><a href="@Url.Action("Add", "Account")" target="_blank">Add User</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
